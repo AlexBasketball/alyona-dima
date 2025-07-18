@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
     e.stopPropagation();
   });
 
-  inviteModal.addEventListener("submit", () => {
-    inviteModal.classList.add("hidden");
-    alert("Спасибо, форма успешно отправлена");
-  });
+  //   inviteModal.addEventListener("submit", () => {
+  //     inviteModal.classList.add("hidden");
+  //     alert("Спасибо, форма успешно отправлена");
+  //   });
 
   inviteSubmitBtn.addEventListener("click", () => {
     inviteModal.classList.add("hidden");
