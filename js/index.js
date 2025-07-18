@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const inviteModal = document.querySelector(".invite-modal");
   const inviteCloseBtn = document.querySelector(".invite-modal__close");
   const inviteModalWindow = document.querySelector(".invite-modal__window");
+  const inviteSubmitBtn = document.querySelector(".invite-modal__btn");
 
   inviteBtn.addEventListener("click", () => {
     inviteModal.classList.remove("hidden");
@@ -27,7 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     e.stopPropagation();
   });
 
-  inviteModal.addEventListener("click", () => {
+  inviteModal.addEventListener("submit", () => {
+    inviteModal.classList.add("hidden");
+    alert("Спасибо, форма успешно отправлена");
+  });
+
+  inviteSubmitBtn.addEventListener("click", () => {
     inviteModal.classList.add("hidden");
   });
 
