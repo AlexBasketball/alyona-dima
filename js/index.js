@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     direction: "horizontal",
     slidesPerView: 2,
     spaceBetween: 30,
+    loop: true,
 
     navigation: {
       nextEl: ".swiper-custom-next",
@@ -76,48 +77,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     myMap.geoObjects.add(myGeoObject);
   }
-
-  const validation = new JustValidate(".form");
-
-  validation
-    .addField(".invite-modal__name", [
-      {
-        rule: "minLength",
-        value: 3,
-        errorMessage: "Введите 3 и более символов",
-      },
-      {
-        rule: "maxLength",
-        value: 30,
-        errorMessage: "Введите менее 30 символов",
-      },
-      {
-        rule: "required",
-        value: true,
-        errorMessage: "Введите имя!",
-      },
-    ])
-
-    .onSuccess((event) => {
-      console.log("Validation passes and form submitted", event);
-
-      let formData = new FormData(event.target);
-
-      console.log(...formData);
-
-      let xhr = new XMLHttpRequest();
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            console.log("Отправлено");
-          }
-        }
-      };
-
-      xhr.open("POST", "mail.php", true);
-      xhr.send(formData);
-
-      event.target.reset();
-    });
 });

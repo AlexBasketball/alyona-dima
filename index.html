@@ -366,14 +366,25 @@
                   />
                 </svg>
               </button>
-              <form class="form" action="#" method="post">
+              <form
+                class="form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="ae0c464e-dd50-4303-9d8a-01ce9525011f"
+                />
                 <h3 class="invite-modal__title">Введите ваше имя</h3>
                 <label class="invite-modal__label--name">
                   <input
                     class="invite-modal__name"
                     type="text"
                     name="Имя"
-                    placeholder="Имя Фамилия Отчество"
+                    placeholder="Фамилия Имя Отчество"
+                    minlength="3"
+                    maxlength="40"
                     required
                   />
                 </label>

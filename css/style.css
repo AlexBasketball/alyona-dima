@@ -390,8 +390,13 @@ img {
 }
 
 .swiper-slide {
+  height: auto;
   padding: 20px;
   border: 1px solid #dbaf96;
+}
+
+.swiper-img {
+  height: 100%;
 }
 
 .btns {
