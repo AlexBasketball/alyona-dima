@@ -394,10 +394,6 @@ img {
   border: 1px solid #dbaf96;
 }
 
-.swiper-img {
-  height: 100%;
-}
-
 .btns {
   display: flex;
   flex-direction: row;
