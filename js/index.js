@@ -4,6 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
+    effect: "coverflow",
+    autoplay: true,
+    speed: 400,
+
+    coverflowEffect: {
+      rotate: 40,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
 
     navigation: {
       nextEl: ".swiper-custom-next",
